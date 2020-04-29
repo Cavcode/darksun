@@ -7,3 +7,4 @@
 .git/
 .nasher/
 src/_scriptdump/
+.gitmodules
