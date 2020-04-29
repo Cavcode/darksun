@@ -6,5 +6,5 @@
 # Ignore the nasher directory
 .git/
 .nasher/
-src/_scriptdump/
-.gitmodules
+_scriptdump/
+
