@@ -1,0 +1,9 @@
+# Ignore packed files
+*.erf
+*.hak
+*.mod
+
+# Ignore the nasher directory
+.git/
+.nasher/
+src/_scriptdump/

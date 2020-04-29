@@ -1,0 +1,1456 @@
+{
+  "__data_type": "ITP ",
+  "MAIN": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0,
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 5
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 186
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 8
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 4818
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 9
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6739
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 6
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 4815
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 7
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6669
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 58
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6813
+              }
+            },
+            {
+              "__struct_id": 0,
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 11
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6822
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 10
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6741
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 12
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6742
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6740
+              }
+            }
+          ]
+        },
+        "STRREF": {
+          "type": "dword",
+          "value": 335
+        }
+      },
+      {
+        "__struct_id": 0,
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 55
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6810
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 13
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6744
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 63
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6831
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 59
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6814
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 14
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6809
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 56
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6811
+              }
+            }
+          ]
+        },
+        "STRREF": {
+          "type": "dword",
+          "value": 6743
+        }
+      },
+      {
+        "__struct_id": 0,
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 60
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6815
+              }
+            },
+            {
+              "__struct_id": 0,
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 16
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6745
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 15
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 1520
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 17
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6746
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 18
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6747
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 19
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 1530
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 186
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 64
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 83602
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 57
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6812
+              }
+            },
+            {
+              "__struct_id": 0,
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 21
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6750
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 22
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6751
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6749
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 20
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6748
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 23
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6699
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 24
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6753
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 26
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6754
+              }
+            }
+          ]
+        },
+        "STRREF": {
+          "type": "dword",
+          "value": 1592
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ID": {
+          "type": "byte",
+          "value": 54
+        },
+        "STRREF": {
+          "type": "dword",
+          "value": 6808
+        }
+      },
+      {
+        "__struct_id": 0,
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 0
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "[Plugin] Default BioWare Events"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "bw_defaultevents"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Template: Data Item"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "util_dataitem"
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6688
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 1
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6689
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 2
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6690
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 3
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6691
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 4
+              },
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Book of Player Voice Commands"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_playerbook"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Abyssal Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_abyssal"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Animal Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_animal"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Celestial Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_celestial"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Common Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_common"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Default Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_default"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Draconic Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_draconic"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Drow Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_drow"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Dwarf Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_dwarf"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Elven Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_elven"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Gnome Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_gnome"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Goblin Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_goblin"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Halfling Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_halfling"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Infernal Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_infernal"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Leetspeak Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_leetspeak"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Mulhorandi Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_mulhorand"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Orc Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_orc"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Rashemi Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_rashemi"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Sylvan Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_sylvan"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Template Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_template"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "DMFI: Thieves Cant Language Initializer"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_l_cant"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "PC Autofollow Widget"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_pc_follow"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "PC Dicebag"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_pc_dicebag"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "PC Emote Wand"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "dmfi_pc_emote"
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6692
+              }
+            }
+          ]
+        },
+        "STRREF": {
+          "type": "dword",
+          "value": 6687
+        }
+      },
+      {
+        "__struct_id": 0,
+        "ID": {
+          "type": "byte",
+          "value": 53
+        },
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Book of DM Voice Commands"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_dmbook"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Admin Server Wand"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_server"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Affliction Wand"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_afflict"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Buff Wand"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_buff"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Destroy Object Widget"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_remove"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Dicebag"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_dicebag"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI DM Wand"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_dmw"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Emote Wand"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_emote"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Encounter Ditto Widget"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_en_ditto"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Encounter Wand"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_encounte"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Exploder Widget"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_exploder"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI FX Wand"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_fx"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Jail Widget"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_jail_widget"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Music Wand"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_music"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Mute All NPCs Widget"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_mute"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Naming Wand"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_naming"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI NPC Control Wand"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_faction"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Party 500 XP"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_500xp"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Sound Wand"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_sound"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Stop Combat Widget"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_peace"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Target / Appearance Data Widget"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_target"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Voice Wand"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_voice"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI Voice Widget"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_voicewidget"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "DMFI XP Wand"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_xp"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "The One Ring"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "dmfi_onering"
+              }
+            }
+          ]
+        },
+        "STRREF": {
+          "type": "dword",
+          "value": 6732
+        }
+      },
+      {
+        "__struct_id": 0,
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 27
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6757
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 28
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6758
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 29
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6759
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6756
+              }
+            },
+            {
+              "__struct_id": 0,
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 32
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6762
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 30
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6760
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 31
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6761
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 490
+              }
+            },
+            {
+              "__struct_id": 0,
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 33
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6764
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 34
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6765
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 35
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6766
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 36
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6767
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 37
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6699
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 38
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6768
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6763
+              }
+            },
+            {
+              "__struct_id": 0,
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 39
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6769
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 40
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6770
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 41
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6771
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 42
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6772
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 61
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6817
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 491
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 46
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6775
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 47
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6776
+              }
+            },
+            {
+              "__struct_id": 0,
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 48
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6778
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 49
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6779
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 50
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6780
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6777
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 51
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 489
+              }
+            },
+            {
+              "__struct_id": 0,
+              "LIST": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 43
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6774
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 44
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6819
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 45
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6820
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "ID": {
+                      "type": "byte",
+                      "value": 62
+                    },
+                    "STRREF": {
+                      "type": "dword",
+                      "value": 6821
+                    }
+                  }
+                ]
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 6818
+              }
+            },
+            {
+              "__struct_id": 0,
+              "ID": {
+                "type": "byte",
+                "value": 52
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 494
+              }
+            }
+          ]
+        },
+        "STRREF": {
+          "type": "dword",
+          "value": 500
+        }
+      }
+    ]
+  }
+}
