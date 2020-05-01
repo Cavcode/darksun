@@ -368,7 +368,7 @@ int dmfi_IsVoiceCommand(string sCommand)
     sCommand = TrimString(sCommand);
     sCommand = GetStringLeft(sCommand, 1);
 
-    return (HasListItem(DMFI_VOICE_COMMANDS, sCommand) || sCommand == ",");
+    return (HasListItem(DMFI_VOICE_COMMANDS, sCommand) || sCommand == DMFI_VOICE_ASSOCIATE);
 }
 
 int dmfi_IsActionCommand(string sCommand)
@@ -405,10 +405,10 @@ int dmfi_IsEmoteCommand(string sCommand)
 
     if (GetStringLength(sCommand) == 1)
     {
-        if (sCommand == "*")
+        if (sCommand == DMFI_ACTION_EMOTE)
             return TRUE;
     }
-    else if (dmfi_IsVoiceActionPair(sCommand) && GetStringRight(sCommand, 1) == "*")
+    else if (dmfi_IsVoiceActionPair(sCommand) && GetStringRight(sCommand, 1) == DMFI_ACTION_EMOTE)
     {
         return TRUE;
     }

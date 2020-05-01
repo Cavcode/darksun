@@ -77,135 +77,129 @@ void dmfi_OnClientEnter()
     return TRUE;
 }
 
-void dmfi_OnPlayerChat()
+void dmfi_HandleChatHook(int nHandle)
 {
-    object oVoiceTarget, oActionTarget, oTarget, oPC = GetPCChatSpeaker();
-    string sCommand, sVoiceCommand, sActionCommand;
-    string sModifiedMessage, sOriginalMessage = GetPCChatMessage();
-    int i, nCount, nChannel = GetPCChatVolume();
-    float fDistance;
-    
-    //This loops through the hooks assigned to the chatting pc to determine
-    //  if there are any hooks to be satisfied.  If there are any assigned
-    //  hooks, they are executed as required.  If not, the section is skipped
-    //  for performance reasons.
-    string sPCHooks = GetLocalString(oPC, DMFI_HOOK);
-    if (nCount = CountList(sPCHooks))
-    {
-        //Loop the PC's list and grab those specific hooks to be satisfied.
-        for (i = 0; i < nCount; i++)
-        {
-            int nHandle = StringToInt(GetListString(oPC, i, DMFI_HOOKS));
-            if nHandle <= DMFI_HOOK_HANDLE_SPLIT
-            {
-                //TODO -- See if these two hook types can be combined to 
-                //  reduce amount of code and looping.
-                //TODO -- use bitwise for channels instead of into <<
-                //TODO -- ListenAll aparently listens for ANYONE chatting
-                //      ANYTHING and runs the scripts on that.  What the
-                //      heck is the point of that?  Seems like it could
-                //      overwhelm the system pretty quickly if it's not
-                //      killed on first use, but if it takes the first random
-                //      input, who know what you're going to get.  Get rid of
-                //      this and look for a better way.
-                //     What are they meant for, can they be added?
-                //This is a CHATHOOK -- this type of hook is designed for one
-                //  time use to get text input during a conversation or the like.
-                struct DMFI_CHATHOOK ch = dmfi_GetChatHook(nHandle);
-                if ((1 << GetPCChatVolume() & ch.nChannels) &&
-                     (ch.bListenAll || ch.oSpeaker == GetPCChatSpeaker()))
-                    ExecuteScript(ch.sScript, ch.oScriptRunner);
+    struct DMFI_CHATHOOK ch = dmfi_GetChatHook(nHandle);
+    if ((1 << GetPCChatVolume() & ch.nChannels) &&
+            (ch.bListenAll || ch.oSpeaker == GetPCChatSpeaker()))
+        ExecuteScript(ch.sScript, ch.oScriptRunner);
 
-                if (ch.AutoRemove)
-                    dmfi_RemoveChatHook(ch.nHandle);
-            }   
-            else
-            {  /*
-                //This is a listener hook, brought in from the first part
-                //  of RelayTextToEavesdropper() in dmfi_plychat_exe
-                //TODO See if Type 1 and Type 2 listener hook logic can
-                //  be combined, do we need a type 3?
-                //  Seems like a really convoluted way to listen to the PC
-                //  IF you want to eavesdrop on the PC, just send all of his
-                //  chat to the DM., unless you want to listen to an entire
-                //  conversation (both sides) 
+    if (ch.AutoRemove)
+        dmfi_RemoveChatHook(ch.nHandle);
+}
+
+void dmfi_HandleListenerHook(int nHandle)
+{
+/*
+    //This is a listener hook, brought in from the first part
+    //  of RelayTextToEavesdropper() in dmfi_plychat_exe
+    //TODO See if Type 1 and Type 2 listener hook logic can
+    //  be combined, do we need a type 3?
+    //  Seems like a really convoluted way to listen to the PC
+    //  IF you want to eavesdrop on the PC, just send all of his
+    //  chat to the DM., unless you want to listen to an entire
+    //  conversation (both sides) 
+    //TODO this is all whack.  Change the listening options:
+    //  --List to anything a PC says (but not hears)
+    //  --Eavesdrop on PC (everything he says or hears publicly)
+    //  --Eavesdrop on NPC (everything NPC hears)
+    //  --Eavesdrop on location (everthing heard at location)
+    //TODO -- Create this message and color it
+    struct DMFI_LISTENER_HOOK lh = dmfi_GetListenerHook(nHandle);
+
+    // As long as the hook type is good, keep going, if not, clean
+    //  up the mess.
+    // TODO -- Change these to constants for easier understanding
+    if (!lh.nType || lh.nType > 2);
+    {
+        dmfi_RemoveListenerHook(lh.nHandle);
+        break;
+    }
+
+    if (GetIsObjectValid(lh.oCreature))
+    {
+        object oListener;
+        location lListener, lPC = GetLocation(oPC);
+
+        if (lh.nRange)
+            oListener = GetFirstFactionMember(lh.oCreature, FALSE);
+        else
+            oListener = lh.oCreature;
+        
+        lListener = GetLocation(oListener);
+        while (GetIsObjectValid(oListener))
+        {
+            fDistance = GetDistanceBetweenLocations(lPC, lListener);
+            
+            //TODO --- check validity of these constants ----..
+            if ((oPC == oListener) || 
+                ((nVolume == TALKVOLUME_WHISPER && fDistance <= WHISPER_DISTANCE) ||
+                (nVolume != TALKVOLUME_WHISPER && fDistance <= TALK_DISTANCE)))
+            {
                 //TODO this is all whack.  Change the listening options:
                 //  --List to anything a PC says (but not hears)
                 //  --Eavesdrop on PC (everything he says or hears publicly)
                 //  --Eavesdrop on NPC (everything NPC hears)
                 //  --Eavesdrop on location (everthing heard at location)
                 //TODO -- Create this message and color it
-                struct DMFI_LISTENER_HOOK lh = dmfi_GetListenerHook(nHandle);
-
-                // As long as the hook type is good, keep going, if not, clean
-                //  up the mess.
-                // TODO -- Change these to constants for easier understanding
-                if (!lh.nType || lh.nType > 2);
-                {
-                    dmfi_RemoveListenerHook(lh.nHandle);
-                    break;
-                }
-
-                if (GetIsObjectValid(lh.oCreature))
-                {
-                    object oListener;
-                    location lListener, lPC = GetLocation(oPC);
-
-                    if (lh.nRange)
-                        oListener = GetFirstFactionMember(lh.oCreature, FALSE);
-                    else
-                        oListener = lh.oCreature;
-                    
-                    lListener = GetLocation(oListener);
-                    while (GetIsObjectValid(oListener))
-                    {
-                        fDistance = GetDistanceBetweenLocations(lPC, lListener);
-                        
-                        //TODO --- check validity of these constants ----..
-                        if ((oPC == oListener) || 
-                            ((nVolume == TALKVOLUME_WHISPER && fDistance <= WHISPER_DISTANCE) ||
-                            (nVolume != TALKVOLUME_WHISPER && fDistance <= TALK_DISTANCE)))
-                        {
-                            //TODO this is all whack.  Change the listening options:
-                            //  --List to anything a PC says (but not hears)
-                            //  --Eavesdrop on PC (everything he says or hears publicly)
-                            //  --Eavesdrop on NPC (everything NPC hears)
-                            //  --Eavesdrop on location (everthing heard at location)
-                            //TODO -- Create this message and color it
-                            //TODO -- check the break logic against original
-                            //TODO -- See about sending to all DMs
-                            //  probably need a subfunction for this.
-                            //  in dmfi_plychat_exe
-                            string sMessage = "";
-                            SendMessageToPC(lh.oOwner, sMessage);
-                            break;
-                        }
-                        if (!lh.nRange)
-                            break;
-
-                        oListener = GetNextFactionMember(lh.oCreature, FALSE);
-                    }
-                }
-                else
-                {
-                    //Invalid, delete teh hook
-                    dmfi_RemoveListenerHook(lh.nHandle);
-                }*/
+                //TODO -- check the break logic against original
+                //TODO -- See about sending to all DMs
+                //  probably need a subfunction for this.
+                //  in dmfi_plychat_exe
+                string sMessage = "";
+                SendMessageToPC(lh.oOwner, sMessage);
+                break;
             }
+            if (!lh.nRange)
+                break;
+
+            oListener = GetNextFactionMember(lh.oCreature, FALSE);
+        }
+    }
+    else
+    {
+        //Invalid, delete teh hook
+        dmfi_RemoveListenerHook(lh.nHandle);
+    }*/
+}
+
+void dmfi_OnPlayerChat()
+{
+    object oVoiceTarget, oActionTarget, oTarget, oSpeaker = GetPCChatSpeaker();
+    string sCommand, sVoiceCommand, sActionCommand;
+    string sModifiedMessage, sOriginalMessage = GetPCChatMessage();
+    int i, nCount, nHandle, nChannel = GetPCChatVolume();
+    float fDistance;
+    
+    //This loops through the hooks assigned to the chatting pc to determine
+    //  if there are any hooks to be satisfied.  If there are any assigned
+    //  hooks, they are executed as required.  If not, the section is skipped
+    //  for performance reasons.
+    string sSpeakerHooks = GetLocalString(oSpeaker, DMFI_HOOK);
+    if (nCount = CountList(sPCHooks))
+    {
+        //Loop the PC's list and grab those specific hooks to be satisfied.
+        for (i = 0; i < nCount; i++)
+        {
+            nHandle = StringToInt(GetListItem(sSpeakerHooks, i));
+            if nHandle <= DMFI_HOOK_HANDLE_SPLIT
+                dmfi_HandleChatHook(nHandle); 
+            else
+                dmfi_HandleListenerHook(nHandle);
         }
     }
 
     //Let's pause for a moment.  There is A LOT of code after this, so let's do
     //  some quick checks to see if we need to run any of it.
     // we only want to continue if we have this:
-    sModifiedMessage = TrimString(sModifiedMessage);
+    sModifiedMessage = TrimString(sOriginalMessage);
     sCommand = GetStringLeft(sModifiedMessage, 2);
 
     if (!dmfi_IsCommand(sCommand))
         return;
     else if (dmfi_IsEmoteCommand(sCommand) && 
                 (DMFI_MODULE_EMOTES_MUTED || 
-                 dmfi_GetSetting(oPC, DMFI_SETTING_EMOTES_MUTED)) 
+                 dmfi_GetSetting(oSpeaker, DMFI_SETTING_EMOTES_MUTED)) 
         return;
 
     //Let's take a minute to figure out what type of commands we have
@@ -219,7 +213,6 @@ void dmfi_OnPlayerChat()
         sVoiceCommand = GetStringLeft(sCommand, 1);
         sCommand = sVoiceCommand;
         sActionCommand = "";
-
     }
     else if (dmif_IsActionCommand(sCommand))
     {
@@ -257,45 +250,45 @@ void dmfi_OnPlayerChat()
     // TODO - check includes.
     
     //Find the right target for the command ...
-
+    // TODO - use wand to set voice or action target?
 
     
     if (sVoiceCommand != "")
     {
-        if (sVoiceCommand == ":")
-            oVoiceTarget = _GetIsDM(oPC) ? GetLocalObject(oPC, DMFI_TARGET_VOICE) : oPC;
-        else if (sVoiceCommand = ";")
+        if (sVoiceCommand == DMFI_VOICE_TARGET)
+            oVoiceTarget = _GetIsDM(oSpeaker) ? GetLocalObject(oSpeaker, DMFI_TARGET_VOICE) : oSpeaker;
+        else if (sVoiceCommand = DMFI_VOICE_MASTER)
         {
-            oVoiceTarget = GetMaster(oPC);
+            oVoiceTarget = GetMaster(oSpeaker);
             if (!GetIsObjectValid(oVoiceTarget))
             {
-                oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_ANIMALCOMPANION, oPC);
+                oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_ANIMALCOMPANION, oSpeaker);
                 if (!GetIsObjectValid(oVoiceTarget))
                 {
-                    oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_FAMILIAR, oPC);
+                    oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_FAMILIAR, oSpeaker);
                     if (!GetIsObjectValid(oVoiceTarget))
                     {
-                        oTaoVoiceTargetrget = GetAssociate(ASSOCIATE_TYPE_HENCHMAN, oPC);
+                        oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_HENCHMAN, oSpeaker);
                         if (!GetIsObjectValid(oVoiceTarget))
-                            oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_SUMMONED, oPC);
+                            oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_SUMMONED, oSpeaker);
                     }
                 }
             }
         }
-        else if (sVoiceCommand = ",")
+        else if (sVoiceCommand = DMFI_VOICE_ASSOCIATE)
         {
-            oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_SUMMONED, oPC);
+            oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_SUMMONED, oSpeaker);
             if (!GetIsObjectValid(oVoiceTarget))
             {
-                oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_HENCHMAN, oPC);
+                oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_HENCHMAN, oSpeaker);
                 if (!GetIsObjectValid(oVoiceTarget))
                 {
-                    oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_FAMILIAR, oPC);
+                    oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_FAMILIAR, oSpeaker);
                     if (!GetIsObjectValid(oVoiceTarget))
                     {
-                        oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_ANIMALCOMPANION, oPC);
+                        oVoiceTarget = GetAssociate(ASSOCIATE_TYPE_ANIMALCOMPANION, oSpeaker);
                         if (!GetIsObjectValid(oVoiceTarget))
-                            oVoiceTarget = GetMaster(oPC);
+                            oVoiceTarget = GetMaster(oSpeaker);
                     }
                 }
             }
@@ -306,19 +299,24 @@ void dmfi_OnPlayerChat()
     // if we have a target and there's not a command, just send the rest of the
     //  text to the target.  If we have a target and there's is a command, let's
     //  press to make that command happen.
-    if (sActionCommand == "")
+    if (sActionCommand == "" && GetIsObjectValid(oVoiceTarget))
     {
-        //Ok, there's no action to me taken, just send the text and be done with it.
-        AssignCommand(oVoiceTarget, SpeakString(sModifiedMessage, nChannel))
-        return;
+        //Ok, there's no action to be taken, just send the text and be done with it.
+        if (GetIsObjectValid(oVoiceTarget))
+        {
+            AssignCommand(oVoiceTarget, SpeakString(sModifiedMessage, nChannel))
+            return;
+        }       
+        else {}
+            //TODO warn of no voice target
     }
 
     //If we're here, we either have voice target (or not), but we do have a
     //  command to accomplish.
     if (!GetIsTargetValid(oTarget))
     {
-        if (sActionCommand == "*" || sActionCommand == "[")
-            oTarget = oPC;
+        if (sActionCommand == DMFI_ACTION_EMOTE || sActionCommand == DMFI_ACTION_LANGUAGE)
+            oTarget = oSpeaker;
     }
 
     // We could still have an invalid target here, say for a PC using a .
@@ -329,23 +327,23 @@ void dmfi_OnPlayerChat()
         return;
     }
 
-    if (sActionCommand == ".")
+    if (sActionCommand == DMFI_ACTION_COMMAND)
     {   //Command
         //TODO ParseCommand rewrite
-        ParseCommand(oTarget, oPC, sModifiedMessage);
+        ParseCommand(oTarget, oSpeaker, sModifiedMessage);
     }
-    else if (sActionCommand == "*")
+    else if (sActionCommand == DMFI_ACTION_EMOTE)
     {   //Emote
         //TODO Pareseemote rewrite
         ParseEmote(sMessage, oTarget);
     }   
-    else if (sActionCommand == "[")
+    else if (sActionCommand == DMFI_ACTION_LANGUAGE)
     {   //Language
         //TODO go through this function and change out how languages
         //  are assigned and kept.  Probably need to keep in the database
         //  like the settings.
         //TODO pull/push languages known on login/logout.
-        sModifiedMessage = TranslateToLanguage(sModifiedMessage, oTarget, nChannel, oPC);
+        sModifiedMessage = TranslateToLanguage(sModifiedMessage, oTarget, nChannel, oSpeaker);
         AssignCommand(oTarget, SpeakString(sModifiedMessage, nChannel));
     }
 
@@ -353,12 +351,12 @@ void dmfi_OnPlayerChat()
     if (DMFI_LOG_CONVERSATION)
         //Send this message somehwere.  Currently goes to log file with no stamp.
         Debug("<DMFI Conversation Log Entry>" +
-            "\n  Speaker (" + GetIsDM(oPC) ? "DM" : "PC") + "): " + GetName(oPC) +
-            "\n  Area: " + GetName(GetArea(oPC)) +
+            "\n  Speaker (" + GetIsDM(oSpeaker) ? "DM" : "PC") + "): " + GetName(oSpeaker) +
+            "\n  Area: " + GetName(GetArea(oSpeaker)) +
             "\n  Original Message: " + sOriginalMessage +
             "\n  Modified Messsage: " + sModifiedMessage == "" ? "(empty string)" : sModifiedMessage);
 
-    SetPCChatMessage("");
+    SetPCChatMessage();
 }
 
 // ----- Tag-based scripting -----

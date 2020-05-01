@@ -31,8 +31,15 @@ const string DMFI_INITIALIZED = "DMFI_INITIALIZED";
 const string DMFI_TARGET_VOICE = "DMFI_TARGET_VOICE";
 const string DMFI_TARGET_COMMAND = "DMFI_TARGET_COMMAND";
 
-const string DMFI_VOICE_COMMANDS = ":,;";  //Plus ,
+const string DMFI_VOICE_COMMANDS = ":,;";  //and ,
 const string DMFI_ACTION_COMMANDS = "[,*,.";
+const string DMFI_ACTION_COMMAND = ".";
+const string DMFI_ACTION_EMOTE = "*";
+const string DMFI_ACTION_LANGUAGE = "[";
+const string DMFI_VOICE_TARGET = ":";
+const string DMFI_VOICE_MASTER = ";";
+const string DMFI_VOICE_ASSOCIATE = ",";
+
 const string DMFI_TARGET_UNIVERSAL = "DMFI_TARGET_UNIVERSAL";
 
 const string DMFI_COMMAND_ARGUMENTS = "DMFI_COMMAND_ARGUMENTS";
