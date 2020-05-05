@@ -8,7 +8,7 @@ HCR2 is incorporated into this framework as a plugin (designated `pw`).  Just ab
 
 ## Core Framework
 
-The entire module rests on Michael Sinclair's (squattonmonk) core framework.  The `framework` folder is a fork directly off his repository.  **There will be no pull requests accepted that involve changes to any script in this folder.**
+The entire module rests on Michael Sinclair's (squattingmonk) [core framework](https://github.com/squattingmonk/nwn-core-framework).  The `framework` folder is a fork directly off his repository.  **There will be no pull requests accepted that involve changes to any script in this folder.**
 
 ## Plugins
 
