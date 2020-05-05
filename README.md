@@ -1,57 +1,28 @@
-# Core Framework
+# Dark Sun
 
-This project is a framework for managing a [Neverwinter
-Nights](https://neverwintervault.org) module.
+This repo contains the developmental Dark Sun NWN1:EE module content.  If you want to contribute, please fork this repository and send a pull request when your testing is complete.
 
-This system is in alpha. Things will change and will break. You have been
-warned.
+## HCR2
 
-## Prerequisites
-- [nwnsc](https://gitlab.com/glorwinger/nwnsc)
-- [neverwinter.nim](https://github.com/niv/neverwinter.nim)
-- [nasher.nim](https://github.com/squattingmonk/nasher.nim)
+HCR2 is incorporated into this framework as a plugin (designated `pw`).  Just about all the code within this subdirectory is straight out of Edward Beck's HCR2 creation.  There's been some code removed to allow it work more readily in the library framework we're using.  Generally, however, it remains intact.
 
-## Installation
-Get the code:
-```
-git clone https://github.com/squattingmonk/nwn-core-framework.git
-```
+## Core Framework
 
-Run the build script:
-```
-cd nwn-core-framework
-nasher install all
-```
+The entire module rests on Michael Sinclair's (squattonmonk) core framework.  The `framework` folder is a fork directly off his repository.  **There will be no pull requests accepted that involve changes to any script in this folder.**
 
-This will create the following files in your Neverwinter Nights install
-directory:
-- `modules/core_framework.mod`: a demo module showing the framework in action
-  (currently a barebones testing ground).
-- `erf/core_framework.erf`: an installable erf for use in new or existing
-  modules.
-- `erf/core_utilities.erf`: an installable erf with stand-alone utilities for
-  use in new or existing module. This contains all scripts in `src/utils`. You
-  don't need this if you import `core_framework.erf`.
+## Plugins
 
-Note: `util_i_library.nss` relies on script extensions added by
-[nwnsc](https://gitlab.com/glorwinger/nwnsc). This prevents error messages when
-compiling with `nwnsc`, but prevents compilation in the Toolset. If you want to
-compile the scripts in the toolset instead, you can comment out the lines
-beginning with `#pragma` near the bottom of the script. Note that
-`util_i_library.nss` will still not compile on its own, since it's meant to be
-included in other scripts that implement its functions.
+### Dark Sun
+The `ds` folder contains Dark Sun specific plugins that modify or otherwise hook into the base module systems (HCR2 and core framework)
 
-## Usage
-- Utilities
-  - [Debugging](docs/debugging.md)
-  - [Datapoints](docs/datapoints.md)
-  - [Lists](docs/lists.md)
-  - [Libraries](docs/libraries.md)
+### DMFI
+DMFI development is currently underway and will not be included in the module when you install it.  The scripts do not yet compile and are under heavy revision.  If you modify nasher.cfg to include these scripts, you will not be able to install correctly run the module.  When development is complete, the scripts will automatically be included in the module.
 
-## Acknowledgements
-- This system was heavily influenced by
-  [HCR2](https://neverwintervault.org/project/nwn1/script/hcr2-nwn1-core-framework-and-systems-final-nbde-hcr2-15)
-  and EPOlson's [Common Scripting
-  Framework](https://neverwintervault.org/project/nwn2/script/csf-common-scripting-framework).
-- `util_i_varlists.nss` and `util_i_libraries.nss` adapted from
-  [MemeticAI](https://sourceforge.net/projects/memeticai/).
+### Working
+The `working` folder is used to store scripts that are currently under revision.  This folder will not be included in a module installation, so don't put any scripts there.
+
+## Server
+The server will be setup with a docker version of nasher so we don't have to keep uploading .mod files to the server.  I'll let you know when that's complete and how to build the module on the VM server.
+
+## Contributing
+If you want to contribute, create a fork off this repository.  Any work you do will automatically be saved to the appropriate folder when you `nasher unpack` your saved work.  The only except to this is scripts.  New scripts will be saved to the `module` base folder so they're easy to find.
