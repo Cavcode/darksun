@@ -40,7 +40,7 @@
   },
   "Mod_CustomTlk": {
     "type": "cexostring",
-    "value": ""
+    "value": "ds_psionicist"
   },
   "Mod_CutSceneList": {
     "type": "list",
@@ -52,7 +52,9 @@
   },
   "Mod_Description": {
     "type": "cexolocstring",
-    "value": {}
+    "value": {
+      "0": ""
+    }
   },
   "Mod_DuskHour": {
     "type": "byte",
@@ -92,7 +94,71 @@
   },
   "Mod_HakList": {
     "type": "list",
-    "value": []
+    "value": [
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "ds_2da"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "ds_creatures"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "ds_desert"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "ds_interior1"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "ds_items"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "ds_placeables"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "ds_psionics"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "ds_races"
+        }
+      },
+      {
+        "__struct_id": 8,
+        "Mod_Hak": {
+          "type": "cexostring",
+          "value": "ds_skies"
+        }
+      }
+    ]
   },
   "Mod_IsSaveGame": {
     "type": "byte",

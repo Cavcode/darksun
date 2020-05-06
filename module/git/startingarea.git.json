@@ -480,6 +480,34 @@
                 "type": "byte",
                 "value": 0
               }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
             }
           ]
         },
@@ -1409,6 +1437,34 @@
                 "type": "byte",
                 "value": 0
               }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
             }
           ]
         },
@@ -1965,7 +2021,7 @@
         },
         "MaxHitPoints": {
           "type": "short",
-          "value": 42
+          "value": 37
         },
         "NaturalAC": {
           "type": "byte",
@@ -2249,6 +2305,34 @@
                 "type": "byte",
                 "value": 0
               }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 0,
+              "Rank": {
+                "type": "byte",
+                "value": 0
+              }
             }
           ]
         },
@@ -2326,7 +2410,7 @@
         },
         "XOrientation": {
           "type": "float",
-          "value": 0.6152335405349731
+          "value": 0.6152339577674866
         },
         "XPosition": {
           "type": "float",
@@ -2334,7 +2418,7 @@
         },
         "YOrientation": {
           "type": "float",
-          "value": -0.7883448600769043
+          "value": -0.7883445620536804
         },
         "YPosition": {
           "type": "float",
@@ -2854,7 +2938,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": 0.9572030901908875
+          "value": 0.9572029709815979
         },
         "BodyBag": {
           "type": "byte",

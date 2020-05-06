@@ -400,6 +400,44 @@
           "type": "byte",
           "value": 54
         },
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Cosmic Awareness"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "ps_cosaware_it"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Imbued Gem"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "ps_receptacle_it"
+              }
+            },
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Psychic Blade"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "ps_psychblade_it"
+              }
+            }
+          ]
+        },
         "STRREF": {
           "type": "dword",
           "value": 6808

@@ -33,7 +33,7 @@ In order to clone, fork and contribute to this project, you will need a GitHub a
 
 ## Git
 
-In order to efficiently contribute to the Dark Sun project, you need a git client.  Following are the steps to obtain, install and configure your git client.  You can obtain this through the [git download page](https://git-scm.com/downloads).  There are version for most common operating systems.  For those on Windows, you will get a tool called Git Bash which is a version of PowerShell or command line utility.  However, any command line utility or terminal can be used to accomplish the tasks required to setup Git.
+In order to efficiently contribute to the Dark Sun project, you need a git client.  Git is source control software which tracks changes to selected code and allows reversion, if necessary.  Following are the steps to obtain, install and configure your git client.  For those on Windows, you will get a tool called Git Bash which is a version of PowerShell or a command line utility.  However, any command line utility or terminal can be used to accomplish the tasks required to setup Git.
 
 1. [Download](https://git-scm.com/downloads) and install git for your operating system.
 

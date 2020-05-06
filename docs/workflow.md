@@ -114,6 +114,8 @@ This command will force your local (on your machine) and remote (on the the GitH
 
 ## Building the Module
 
+*Note:  If you are modifying non-toolset files (such as scripts, models, 2DAs, etc.), you do not need to build the module to do your work.  Open your work directly from the repository directory on your computer, do your work in whatever program you use, and re-save the work into the repository.  Then skip down to the [staging and committing section](#staging-and-committing-changes) below to continue your workflow.  So, if you are not building items, areas or conversations, you can work completely outside the toolset and save yourself a few steps.*
+
 Now we're ready to build a module file so we can start working on it.  In your command line utility, type the following:
 
 ```
