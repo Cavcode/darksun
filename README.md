@@ -2,6 +2,10 @@
 
 This repo contains the developmental Dark Sun NWN1:EE module content.  If you want to contribute, please fork this repository and send a pull request when your testing is complete.
 
+# Tutorials
+
+This section is provided for team members, or any potential contributors, in case they are not familiar with the tools we are using or what an effective work flow looks like.  If you're a seasoned developer or contributor, feel free to continue using your own processes.  You don't need permission to fork the repository and ask to contibute something.  If you don't know how to fork the repository, [check out our installation tools tutorial](docs/tools.md/#github-account).
+
 ## Development Tools
 
 [Read the Tool Installation Tutorial](docs/tools.md)
@@ -19,6 +23,20 @@ The whole purpose of setting up these tools is to create an efficient developmen
 [Coming soon! ~~Read the VSCode Installation and Setup Tutorial~~](docs/vscode.md)
 
 For the scripters among us, and even those who are more daring, I highly suggest using Visual Studio Code as your prefered development environment.  It is lightweight, agile, contains a powershell terminal, interaces with your git repository and allow you to stage and commit changes to your forked repository.  Additonally, you edit, debug and compile all of you scripts directly in the program without ever having to touch the toolset.
+
+## Letting the team know about issues with the module
+
+[Coming soon! ~~Read the Issues tutorial~~](docs/issues.md)
+
+This is for team members and players.  For players, you can submit bugs you find in-game.  For team members, you can request help with issues and attach those request to specific files in a pull request.  If you're not familiar with the Issues functionality on GitHub, [this tutorial](docs/issues.md) is for you.
+
+## Adding to our Wiki
+
+[Coming soon! ~~Read the Wiki tutorial~~](docs/wiki.md)
+
+The wiki pages on this site should contain documentation on the major system of the module, as well as story background and other information.  If you want to contribute to our wiki, but don't know how, [this tutorial](docs/wiki.md) is for you.
+
+# Module Systems
 
 ## HCR2
 

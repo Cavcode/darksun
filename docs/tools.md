@@ -2,6 +2,10 @@
 
 The purpose of this tutorial is to install the basic tools required to enable our workflow.  These tools will take a few minutes to install but will save countless hours of building modules and ensuring the most current files are always included.  Using all of these tools in concert will allow the team to ensure the most current files are always in the module, revert to a previous version of any files should we find faults, and build a working module in seconds.  To get those tools working on your computer, follow these steps in order.  If you're a veteran to module development and familiar with this tools, it's your option.  This tutorial is primarily aimed at those who have little experience with these tools.
 
+## Disclaimer
+
+There are **A LOT** of words here.  Don't let this scare you off of the idea of using these tools.  I've chosen to add a lot of detail based on the assumption you've not worked with these tools before.  If you have, you can ignore much of this.  After installing these tools and [reading the workflow tutorial](workflow.md), you should have confidence that you can easily and readily employ these tools to make quick changes to the module.
+
 * [Setting up your GitHub Account](#github-account)
 * [Installing Git](#git)
 * [Installing Nimble and Neverwinter](#nimble-&-neverwinter)
@@ -41,13 +45,20 @@ In order to efficiently contribute to the Dark Sun project, you need a git clien
 
     *Note:  Each command line utility displays your current folder in a different way, but it should be obvious where you are.  Use the command `dir` to see what folders are in your current directory, `cd ..` to move backward one level in the folder structure, or `cd <folder_name>` to move to another folder.*
 
-4. Clone the forked repository you created when you were making your GitHub account.  To do this, type the following into your command line:  
+4. Add your username and e-mail to the Git configuration file.  This is required if you want to submit content to the repository.  This not the user name you used to [create an account on GitHub](#github-account) in the previous section.  It's just your name.  This value and your email will be automatically attached to all commits that are pushed to the remote repository.  In your command line client, type the following:
+
+    ```
+    git config --global user.name "<your name>"
+    git config --global user.email "<your.email@address.com>"
+    ```
+
+5. Clone the forked repository you created when you were making your GitHub account.  To do this, type the following into your command line:  
     ```
     git clone https://github.com/<your_user_name>/darksun.git
     ``` 
     and press enter.  If you correctly entered the repository address, you should see some activity and reports showing copied files.  These files are being copied from your forked repository to your computer.  
 
-5. Add an upstream to your forked repository so you can retrieve updates from the primary module repository.  Since you are not working on the primary repository, any updates to the primary repository will not automatically update to the fork you're working on.  If you want to retrieve updates from the primary repository to ensure you always have the most recent data, you need to add an upstream to your local repository.  On the command line, type the following: 
+6. Add an upstream to your forked repository so you can retrieve updates from the primary module repository.  Since you are not working on the primary repository, any updates to the primary repository will not automatically update to the fork you're working on.  If you want to retrieve updates from the primary repository to ensure you always have the most recent data, you need to add an upstream to your local repository.  On the command line, type the following: 
     ```
     git remote add upstream https://github.com/tinygiant98/darksun.git
     ``` 
@@ -79,7 +90,7 @@ Since we've already installed Nimble, installing neverwinter.nim is extremely ea
 
 ## Nasher
 
-Nasher is a module maintenance tool written and maintained by Michael Sinclair (squattingmonk).  Although not strictly a requirement, using *Nasher* will greatly reduce your workload and shorten your workflow when deploying content to the Dark Sun module.  Nasher can be run through docker, though if you're not familiar with docker, I recommend installing it directly.
+Nasher is a module maintenance tool written and maintained by Michael Sinclair (squattingmonk).  Although not strictly a requirement, using Nasher will greatly reduce your workload and shorten your workflow when deploying content to the Dark Sun module.  Nasher can be run through docker, though if you're not familiar with docker, I recommend installing it directly.
 
 Since we already have the nimble programming language installed via choosenim, installing Nasher is easy. 
 
@@ -89,7 +100,7 @@ Since we already have the nimble programming language installed via choosenim, i
     nimble install nasher
     ```
 
-2. Initialize Nasher.  Much like Git, Nasher creates a cache of your repository files in order to compare file versions.  This allows Nasher to skip certain steps in the build process and saves time, especially in large module.  In your command line utility, type the following:
+2. Initialize Nasher.  Much like Git, Nasher creates a cache of your repository files in order to compare file versions.  This allows Nasher to skip certain steps in the build process and saves time, especially in a large module.  In your command line utility, type the following:
 
     ```
     nasher init
