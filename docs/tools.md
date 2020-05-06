@@ -6,6 +6,8 @@ The purpose of this tutorial is to install the basic tools required to enable ou
 * [Installing Git](#git)
 * [Installing Nimble and Neverwinter](#nimble-&-neverwinter)
 * [Installing Nasher](#nasher)
+* [Getting your Questions Answered](#questions)
+* [The Next Step](#conclusion)
 
 ## GitHub Account
 
@@ -87,7 +89,27 @@ Since we already have the nimble programming language installed via choosenim, i
     nimble install nasher
     ```
 
-# Conclusion
+2. Initialize Nasher.  Much like Git, Nasher creates a cache of your repository files in order to compare file versions.  This allows Nasher to skip certain steps in the build process and saves time, especially in large module.  In your command line utility, type the following:
+
+    ```
+    nasher init
+    ```
+
+    *Note:  This command will create a hidden .nasher directory in your folder.  This folder contains the file cache and a few other items.  Everything within this folder can be deleted without repurcussion, however, do not delete the .nasher folder itself.*
+
+3. Configure NWNSC.  NWNSC is an external script compiler for Neverwinter Nights created by glorwinger (sorry, I don't know his real name).  He created this tool so that module developer's like yourselves could compile scripts without having to use the toolset.  NWNSC provides much better feedback and can be used with almost any development environment (including [VScode](vscode.md)) to test script compilation without opening the toolset.  The file `nwnsc.exe` is included in the base folder of the primary repository, so it will be included in your forked repository.  The following command uses the path where your NWNEE game files are installed, not the path to the user content that is normally in your documents directory.  To configure your installation path, type the following into your command line utility:
+
+    ```
+    nasher config --nssFlags "-n C:/<path>/<to>/<NWNEE> -owkey"
+    ```
+
+    *Note:  A common error is to have a trailing '/' after the path in the command above.  There should be no trailing '/'.*
+
+## Questions
+
+If you have any questions about installing these tools, and you're sure you followed the instructions above correctly, you're best bet is to get onto the [Dark Sun discord](https://discordapp.com/channels/468225176773984256/468225176773984258) and ask a question about installing the tools.  If you're not a member of our discord, you can [join](https://discord.gg/8ZxgMRc).  If you tag me (@tinygiant) in your post, I'll likely answer pretty quickly.  If you don't tag me, I may not see the question at all, but one of our many other team members might be able to help.  I'm happy to answer discord DMs also if you don't want to join the discord.
+
+## Conclusion
 
 Git and Nasher will be the primary programs we will use when we conduct our repository workflow.  Once all of this is setup, it only takes a few seconds to create a working module from the repository.  Any changes you make can be reflected within a working module within a few more seconds.  How to do all of this will be handled in the [workflow tutorial](workflow.md).  Read that next.
 
