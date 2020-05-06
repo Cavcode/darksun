@@ -2,6 +2,24 @@
 
 This repo contains the developmental Dark Sun NWN1:EE module content.  If you want to contribute, please fork this repository and send a pull request when your testing is complete.
 
+## Development Tools
+
+[Read the Tool Installation Tutorial](docs/tools.md)
+
+For anyone that doesn't already have a development environment set on their machines, the [tool installation tutorial](docs/tools.md) will walk you through setting up the minimum tools you should have to enable an efficent development workflow.  You can develop without these tools, however, you will likely find that using them will save you countless hours of unnecessary work over the course of this module's development.  Also, any work you create that you cannot add to the repository yourself is creating unnecessary work for another member of the team.  So, live them, learn them, love them.  They really do save time.
+
+## Workflow
+
+[Coming soon/~~Ready the Workflow Tutorial~~](docs/workflow.md)
+
+The whole purpose of setting up these tools is to create an efficient development environment.  To that end, the workflow tutorial will walk you through using the various tools you installed in the tool installation tutorial and provide the foundation for quickly creating and deploying new content.
+
+## Using VSCode as a Development Environment
+
+[Coming soon/~~Read the VSCode Installation and Setup Tutorial~~](docs/vscode.md)
+
+For the scripters among us, and even those who are more daring, I highly suggest using Visual Studio Code as your prefered development environment.  It is lightweight, agile, contains a powershell terminal, interaces with your git repository and allow you to stage and commit changes to your forked repository.  Additonally, you edit, debug and compile all of you scripts directly in the program without ever having to touch the toolset.
+
 ## HCR2
 
 HCR2 is incorporated into this framework as a plugin (designated `pw`).  Just about all the code within this subdirectory is straight out of Edward Beck's HCR2 creation.  There's been some code removed to allow it work more readily in the library framework we're using.  Generally, however, it remains intact.
