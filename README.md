@@ -10,13 +10,13 @@ For anyone that doesn't already have a development environment set on their mach
 
 ## Workflow
 
-[Coming soon/~~Ready the Workflow Tutorial~~](docs/workflow.md)
+[Read the Workflow Tutorial](docs/workflow.md)
 
 The whole purpose of setting up these tools is to create an efficient development environment.  To that end, the workflow tutorial will walk you through using the various tools you installed in the tool installation tutorial and provide the foundation for quickly creating and deploying new content.
 
 ## Using VSCode as a Development Environment
 
-[Coming soon/~~Read the VSCode Installation and Setup Tutorial~~](docs/vscode.md)
+[Coming soon! ~~Read the VSCode Installation and Setup Tutorial~~](docs/vscode.md)
 
 For the scripters among us, and even those who are more daring, I highly suggest using Visual Studio Code as your prefered development environment.  It is lightweight, agile, contains a powershell terminal, interaces with your git repository and allow you to stage and commit changes to your forked repository.  Additonally, you edit, debug and compile all of you scripts directly in the program without ever having to touch the toolset.
 
